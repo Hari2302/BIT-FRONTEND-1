@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="emp.css">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="logout.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Employee Management System</h1>
+            <div class="logout-section">
+                <button id="logoutButton">Logout</button>
+            </div>
+        </div>
+    </header>
+    
+<!-- Logout Confirmation Modal -->
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <h2>Are you sure you want to logout?</h2>
+        <div class="modal-actions">
+            <button id="cancelButton">Cancel</button>
+            <button id="confirmLogoutButton">Logout</button>
+        </div>
+    </div>
+</div>
+    
+    <main>
+        <section class="dashboard">
+            <h2>Welcome to the Admin Dashboard</h2>
+            <div class="dashboard-options">
+                <button class="option-btn" id="addEmployeeBtn">Add Employee</button>
+                <button class="option-btn" id="viewEmployeesBtn">View Employees</button>
+                            <!-- Search Input -->
+           
+
+            <!-- Employee List Container -->
+         
+                <button class="option-btn" id="manageApplicationsBtn">Manage Applications</button>
+ 
+            </section>
+
+        
+
+        
+<!-- Sliding Panel for Employee Role (Intern, Fresher, Experience) -->
+<div id="empPanel" style="display: none;">
+    <img src="/assest/question-mark.png" alt="" id="questionMark">
+    <!-- Intern Panel -->
+    <div class="panel-box" id="intern" onclick="showInternForm()">
+        <span>Intern</span>
+    </div>
+
+    <!-- Fresher Panel -->
+    <div class="panel-box" id="fresher" onclick="showFresherForm()">
+        <span>Fresher</span>
+    </div>
+
+    <!-- Experience Panel -->
+    <div class="panel-box" id="experience" onclick="showExperienceForm()">
+        <span>Experience</span>
+    </div>
+</div>
+
+        <!-- Intern Registration Form -->
+        <div id="internFormContainer" class="form-container" style="display: none;">
+            <h3>Intern Registration Form</h3>
+   
+            <form id="internForm" >
+                <div class="form-group">
+                    <label for="intern-name">Name:</label>
+                    <input type="text" id="intern-name" placeholder="Enter name" required>
+                </div>
+                <div class="form-group">
+                    <label for="intern-email">Email:</label>
+                    <input type="email" id="intern-email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <label for="intern-phone">Phone:</label>
+                    <input type="tel" id="intern-phone" placeholder="Enter phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="intern-role">Role:</label>
+                    <input type="text" id="intern-role" placeholder="Enter role" required>
+                </div>
+                <div class="form-group">
+                    <label for="intern-type">EmpType:</label>
+                    <input type="text" id="intern-type" value="Intern" readonly >
+                </div>
+                <div class="form-group">
+                    <label for="intern-salary">Salary:</label>
+                    <input type="number" id="intern-salary" placeholder="Enter salary" required>
+                </div>
+                <div class="form-group">
+                    <label for="intern-year">Years of Experience:</label>
+                    <input type="number" id="intern-year" placeholder="Enter years of experience" required>
+                </div>
+                <button type="submit" class="submitBtn">Submit</button>
+                <div id="internSuccessMessage" class="success-message"></div>
+            
+            </form>
+
+            
+        </div>
+
+        <!-- Fresher Registration Form -->
+        <div id="fresherFormContainer" class="form-container" style="display: none;">
+            <h3>Fresher Registration Form</h3>
+            
+            <form id="fresherForm">
+                <div class="form-group">
+                    <label for="fresher-name">Name:</label>
+                    <input type="text" id="fresher-name" placeholder="Enter name" required>
+                </div>
+                <div class="form-group">
+                    <label for="fresher-email">Email:</label>
+                    <input type="email" id="fresher-email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <label for="fresher-phone">Phone:</label>
+                    <input type="tel" id="fresher-phone" placeholder="Enter phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="fresher-role">Role:</label>
+                    <input type="text" id="fresher-role" value="Fresher" placeholder="Enter Role">
+                </div>
+                <div class="form-group">
+                    <label for="fresher-type">EmpType:</label>
+                    <input type="text" id="fresher-type" value="Fresher" readonly >
+                </div>
+                <div class="form-group">
+                    <label for="fresher-salary">Salary:</label>
+                    <input type="number" id="fresher-salary" placeholder="Enter salary" required>
+                </div>
+                <div class="form-group">
+                    <label for="fresher-year">Years of Experience:</label>
+                    <input type="number" id="fresher-year" placeholder="Enter years of experience" required>
+                </div>
+                <button type="submit"  class="submitBtn">Submit</button>
+                <div id="fresherSuccessMessage"  class="success-message"></div>
+            </form>
+                   
+        </div>
+
+        <!-- Experience Registration Form -->
+        <div id="experienceFormContainer" class="form-container" style="display: none;">
+            <h3>Experience Registration Form</h3>
+            <form id="experienceForm">
+                <div class="form-group">
+                    <label for="exp-name">Name:</label>
+                    <input type="text" id="exp-name" placeholder="Enter name" required>
+                </div>
+                <div class="form-group">
+                    <label for="exp-email">Email:</label>
+                    <input type="email" id="exp-email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <label for="exp-phone">Phone:</label>
+                    <input type="tel" id="exp-phone" placeholder="Enter phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="exp-role">Role:</label>
+                    <input type="text" id="exp-role"  placeholder="Enter role">
+                </div>
+                <div class="form-group">
+                    <label for="exp-type">EmpType:</label>
+                    <input type="text" id="exp-type" value="Experience" readonly >
+                </div>
+                <div class="form-group">
+                    <label for="exp-salary">Salary:</label>
+                    <input type="number" id="exp-salary" placeholder="Enter salary" required>
+                </div>
+                <div class="form-group">
+                    <label for="exp-year">Years of Experience:</label>
+                    <input type="number" id="exp-year" placeholder="Enter years of experience" required>
+                </div>
+                <button type="submit"  class="submitBtn">Submit</button>
+                 <div id="experienceSuccessMessage" class="success-message"></div>
+            </form>
+                
+
+        </div>
+
+    </main>
+
+    <!-- VIEW EMPLOYEE  -->
+
+    <!-- View Employee Details Section -->
+<section id="employeeSection" style="display: none;">
+    <!-- Search Input -->
+    <input type="text" id="searchInput" placeholder="Search employees..." />
+
+    <!-- Employee List Table -->
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Role</th>
+                <th>Type</th>
+                <th>Salary</th>
+                <th>Experience</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="employeeListContainer">
+            <!-- Employee rows will be dynamically added here -->
+        </tbody>
+    </table>
+</section>
+
+
+<!-- Manage Applications Section -->
+<section id="applicationSection" style="display: none;">
+    <h2>Applications</h2>
+    <table id="applicationTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Applicant Name</th>
+                <th>Email</th>
+                <th>Resume</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="applicationListContainer">
+            <!-- Application rows will be dynamically added here -->
+        </tbody>
+    </table>
+</section>
+
+<!-- SUCCESS MODEL -->  
+ <!-- Success Modal -->
+<div id="successModal" class="modal">
+    
+    <div class="modal-content">
+        <h2></h2>
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div id="errorModal" class="modal">
+    <div class="modal-content">
+        <h2></h2>
+    </div>
+</div>
+
+
+
+    <script src="emp.js"></script>
+    <script src="cart.js"></script>
+    <script src="logout.js"></script>
+        <!-- <script src="viewEmp.js"></script> 
+     <script src="addEmp.js"></script>
+    <script src="manageEmp.js"></script> 
+
+</body> -->
+</html>

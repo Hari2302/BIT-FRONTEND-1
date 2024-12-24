@@ -1,0 +1,441 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Faculty Glyphic", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+  }
+  
+  body {
+    /* background-color: #f0f2f5; */
+    /* background-image: url("/assest/hirig.png"); */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-color: #25607c;
+}
+  
+  /* Header Section */
+  .hero {
+    background: url('https://source.unsplash.com/1600x900/?office,teamwork') center/cover;
+  
+    height: 25vh;
+    /* color: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: wheat;
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero button {
+    padding: 10px 20px;
+    background: #15a7eb;
+    border: none;
+    /* color: #fff; */
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .hero button:hover {
+    background: #15a7eb;
+  }
+  
+  /* Job Listings */
+  .job-listings {
+    padding: 0px;
+    text-align: center;
+  }
+  
+  .job-listings h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #d116d1;
+  }
+  
+  .jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .job-card {
+    background: #d6c2c2;
+    border: 1px solid #ce9898;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(138, 131, 131, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .job-card h3 {
+    font-size: 1.5rem;
+    color: #ce8517;
+  }
+  
+  .job-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .job-card button {
+    padding: 10px 15px;
+    background: #07ac59;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .job-card button:hover {
+    background: #15a7eb;
+  }
+  
+  /* Modal Form */
+  .apply-form-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .apply-form-content {
+    background: #3ca56b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    height: 600PX;
+  }
+  .apply-form-content ,h2,#job-title{
+    color: rgb(56, 5, 63);
+  }
+  
+  .apply-form-content input,
+  .apply-form-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  #applicationForm  #name,#email,#resume,#message{
+    color: rgb(231, 117, 117);
+  }
+  
+  .apply-form-content button {
+    width: 100%;
+    padding: 10px;
+    background: #25607c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .apply-form-content button:hover {
+    background: #06374e;
+  }
+  
+  .close-btn {
+    background: #626d72;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .job-card {
+      width: 100%;
+    }
+    #statusForm{
+      margin: -2rem 0rem 1rem 12rem;
+    
+    }
+  }
+  
+
+  /* Footer styles */
+footer {
+  background-color: #d6e045;
+  color: rgb(7, 3, 3); /* Text color */
+  text-align: center; /* Center align the text */
+  padding: 3px 0; /* Padding around the footer */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .footer-content h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* Applicatuion Form */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+#applicationDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.application-card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.application-field {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.application-field label {
+  font-weight: bold;
+  color: #333;
+}
+
+.application-field span, a {
+  color: #555;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #007BFF;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.application-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.application-card {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+.application-field {
+  margin: 0.5rem 2rem;
+
+}
+
+.application-field label {
+  font-weight: bold;
+}
+
+.application-field span {
+  margin-left: 10px;
+}
+
+.delete-btn {
+  margin-top: 1rem;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+/* APLLICATION STATUS BUTTON */
+
+.viewStatusBtn{
+  margin: 3rem;
+ padding: 10px;
+  /* background-color: #25607c; */
+  /* color: #fff;  */
+
+  cursor: pointer;
+width: fit-content
+}
+.viewStatusBtn button{
+  background: #bd6853;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+#viewStatusBtn:hover {
+  background: #173d27;
+  color: wheat
+}
+#status-email button{
+    background: #f0eeed;
+  color: rgb(24, 22, 18);
+}
+#status-email button:hover{
+  background: #a8b9af;
+  color: wheat
+}
+
+#responseMessage{
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+  margin: 5rem;
+}
+
+/* DELETE APPLICATION MODEL */
+/* Basic styles for application container and cards */
+.application-field {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.application-field label {
+  font-weight: bold;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-btn {
+  padding: 10px 20px;
+  font-size: 14px;  
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+}
+
+.confirm-btn {
+  background-color: red;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #bbb;
+}
+
+.confirm-btn:hover {
+  background-color: darkred;
+}

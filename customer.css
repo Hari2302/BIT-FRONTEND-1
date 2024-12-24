@@ -1,0 +1,1552 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    align-items: center;
+    font-family: "Faculty Glyphic", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+}
+
+
+/* Basic Styling for Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1363c66e;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 1rem;
+    font-weight: 700;
+}
+
+body {
+    /* font-family: , sans-serif; */
+}
+
+header {
+    background-color: #1363c679;
+    color: white;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: rgb(218, 106, 26);
+}
+
+/* Search Icon */
+#searchicon {
+    margin-top: 10px;
+}
+
+/* Media Query for Smaller Screens (e.g., Tablets, Mobile) */
+@media (max-width: 768px) {
+    /* Make the logo smaller and aligned to the left */
+    .logo {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    /* Navbar items should be hidden by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #1363c66e;
+        position: absolute;
+        top: 60px; /* Adjust to be below the navbar */
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .toggle {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    /* Toggle navbar display when clicked */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Larger Screen Sizes */
+@media (min-width: 769px) {
+    /* Reset nav-links display for larger screens */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .toggle {
+        display: none; /* Hide the toggle button on large screens */
+    }
+}
+/* Main Container Styling */
+.main {
+    display: flex;
+    position: relative;
+    background-color: #1363c6;
+    background-image: url(/assest/bg-hero.png);
+    height: 600px;
+    flex-wrap: wrap; /* Allow content to wrap */
+}
+
+.left {
+    position: absolute;
+    left: 8rem;
+    top: 8rem;
+    color: white; /* Ensure text is readable */
+}
+
+.right {
+    margin: 6.25rem 0 0 70rem;
+}
+
+/* Button Styling */
+.btn1 {
+    margin-left: 33px;
+    border-radius: 80px;
+    padding: 6px 15px;
+    color: white;
+    background-color: #1363c6;
+}
+
+#para1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    margin-left: 1.5rem;
+}
+
+.btn2,
+.btn3 {
+    margin: 4px 10px 10px 31px;
+    padding: 14px;
+    font-size: 8px;
+    border-radius: 80px;
+}
+
+.btn3 {
+    color: #ffffff;
+    background-color: #1363c6;
+}
+
+.btn3:hover {
+    color: rgb(7, 6, 6);
+    background-color: white;
+}
+
+.right img {
+    max-width: 100%; /* Ensure image fits in the available space */
+    height: auto;
+}
+
+/* Media Query for Smaller Screens (e.g., Tablets, Mobile) */
+@media (max-width: 768px) {
+    /* Adjust main container layout */
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        height: auto; /* Allow for content to expand */
+        padding: 1rem; /* Add padding to avoid edges */
+    }
+
+    .left {
+        position: relative; /* Remove absolute positioning */
+        left: 0;
+        top: 0;
+        text-align: center; /* Center text for mobile view */
+    }
+
+    .right {
+        margin: 0;
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .btn1 {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 15px; /* Add space below the first button */
+    }
+
+    .btn2,
+    .btn3 {
+        margin: 15px auto;
+        width: 80%; /* Make buttons take up more width */
+        display: block; /* Stack buttons vertically */
+    }
+
+    #para1 {
+        font-size: 9px; /* Adjust font size for readability on small screens */
+        margin-left: -2rem;
+    }
+
+    .right img {
+        max-width: 90%; /* Ensure image fits the screen */
+        height: auto;
+    }
+    /* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    h1 {
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow if the text is too long */
+        text-overflow: ellipsis; /* Add ellipsis if the text overflows */
+        font-size: 22px; /* Adjust font size for better readability */
+        text-align: center; /* Center the text */
+        margin: 0 1rem; /* Add margin for padding */
+    }
+}
+
+}
+/* Main Container Styling */
+.main2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow content to wrap on small screens */
+}
+
+.m2r {
+    margin-top: 10rem;
+    max-width: 100%; /* Make sure image is responsive */
+    height: auto;
+}
+
+.left1 {
+    margin-left: 16%;
+}
+
+.right1 {
+    margin-left: 180px;
+}
+
+/* Buttons Styling */
+.abtbt {
+    margin-left: 3%;
+    margin-top: 10%;
+    border-radius: 100px;
+    padding: 14px;
+}
+
+.rdmrbtn1, .rdmrbtn2 {
+    padding: 15px;
+    margin: 10px;
+    width: 110px;
+    border-radius: 30px;
+    background-color: #1082ce;
+    color: #e5e7ee;
+}
+
+.l3 {
+    margin-left: 20%;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.osbtn {
+    border-radius: 100px;
+    padding: 14px;
+    background-color: rgb(191, 222, 250);
+}
+
+/* Media Query for Smaller Screens (e.g., Tablets, Mobile) */
+@media (max-width: 768px) {
+    /* Adjust main container layout */
+    .main2 {
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center;
+        align-items: center;
+        padding: 1rem; /* Add padding to avoid edges */
+    }
+
+    .left1 {
+        margin-left: 0;
+        text-align: center; /* Center the image */
+        margin-top: 20px; /* Add top margin */
+    }
+
+    .right1 {
+        margin-left: 0;
+        text-align: center; /* Center text */
+        margin-top: 20px; /* Add top margin */
+    }
+
+    .abtbt {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%; /* Make the button full-width */
+    }
+
+    .rdmrbtn1, .rdmrbtn2 {
+        width: 80%; /* Make buttons take up more width */
+        display: block;
+        margin: 10px auto; /* Center the buttons */
+    }
+
+    h1 {
+        font-size: 22px; /* Reduce font size for smaller screens */
+        text-align: center; /* Center the heading */
+    }
+
+    p {
+        font-size: 16px; /* Adjust font size for better readability */
+        text-align: center; /* Center the paragraph */
+        padding: 0 1rem; /* Add padding to avoid text from touching the edges */
+    }
+
+    .left1 img {
+        max-width: 90%; /* Ensure image fits the screen */
+        height: auto;
+    }
+
+    h4 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        text-align: center; /* Center the heading */
+        margin-bottom: 20px;
+    }
+
+    i {
+        margin: 0 5px; /* Adjust icon spacing */
+    }
+}
+
+.main3{
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    background-color: rgb(247, 245, 244);
+}
+
+.r3{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+  column-gap: 10%;
+  row-gap: inherit;
+ 
+
+}
+.row1{
+   
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+     background-color: #2043b6;
+     border-radius: 60px;
+     height: 200%;
+     width: 90%;
+}
+.row2{
+   
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+     background-color: #3757be;
+     border-radius: 60px;
+     height: 200%;
+     width: 90%;
+}
+.row4{
+   
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+     background-color: #3757be;
+     border-radius: 60px;
+     height: 200%;
+     width: 90%;
+}
+.row3{
+   
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+     background-color: #3757be;
+     border-radius: 60px;
+     height: 200%;
+     width: 90%;
+}/* Main Layout */
+.main4 {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    background-color: whitesmoke;
+    gap: 2rem; /* Space between the sections */
+}
+
+/* Individual Divs in main4 */
+.main4 div {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+/* Grid layout for second part of the section */
+.m42 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Style for each service section inside m42 */
+.m42 div {
+    background-color: rgb(255, 255, 255);
+    padding: 3rem;
+    margin-right: 5rem;
+    border-radius: 29px;
+    height: 380px;
+    width: 330px;
+    border-color: #b19191;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+/* Hover effect for m42 div */
+.m42 div:hover {
+    background-color: #1363c6;
+    transition-duration: 0.7s;
+}
+
+/* Icon inside m42 div */
+#m42icon {
+    padding: 25px;
+    border: 1px solid rgb(255, 252, 252);
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+
+/* Hover effect for icons */
+#m42icon:hover {
+    background-color: #dbe4f5;
+}
+
+/* Button Styles */
+.m41btnos, .m42rdbtn, .m41rdbtn {
+    padding: 15px;
+    margin: 10px;
+    width: 110px;
+    border-radius: 30px;
+    background-color: #1082ce;
+    color: #e5e7ee;
+    text-align: center;
+}
+
+.m41btnos {
+    width: 150px;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .main4 {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .m42 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Adjust margin and padding for m42 div elements */
+    .m42 div {
+        margin: 0;
+        width: 100%; /* Make it 100% width for mobile */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    /* Adjust icon size for mobile */
+    #m42icon {
+        padding: 15px;
+        font-size: 30px;
+    }
+
+    /* Make button widths 100% for mobile */
+    .m41btnos, .m42rdbtn, .m41rdbtn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Heading for 'Our Service' */
+    .m41 h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /* Adjust paragraph text size for mobile */
+    .m41 p {
+        font-size: 14px;
+    }
+}
+
+            /* ..........MAIN 5 ...........*/
+
+/* Main Layout */
+.main5 {
+    display: flex;
+    padding: 0rem;
+    background-color: #1363c6;
+    justify-content: space-between; /* Adjust to provide spacing between left and right sections */
+}
+
+.main5 div {
+    padding: 1rem;
+    margin: 6rem 1rem 1rem 13rem;
+    color: white;
+    font-size: 19px;
+}
+
+/* Left Section Styling */
+.l5 {
+    max-width: 50%; /* Restrict the width of the left section */
+}
+
+/* Button Style */
+.m5wbtn {
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Right Section Image Styling */
+.r5 img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 3rem;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .main5 {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .main5 div {
+        margin: 2rem 0rem;
+        text-align: center;
+    }
+
+    .l5 {
+        max-width: 100%; /* Full width for mobile */
+        margin: 0;
+    }
+
+    .r5 {
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .r5 img {
+        margin: 0;
+        max-width: 80%;
+    }
+
+    /* Button size adjustment for mobile */
+    .m5wbtn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Icon adjustments for mobile */
+    .fa-users, .fa-check {
+        font-size: 24px;
+        margin: 1rem 0;
+    }
+
+    .fa-check {
+        margin-left: 0;
+    }
+}
+main6{
+    padding: 2rem;
+    background-color: whitesmoke;
+}
+
+.m6top button{
+    
+    margin-left: 52rem;
+    padding: 14px;
+    font-size: 14px;
+    border-radius: 80px;
+    background-color: white;
+}
+.m6top h1{
+
+    margin-left: 44rem;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.m6botom{
+    display: flex;
+    height: 600px;
+    /* background-color: #333; */
+    
+}
+.left{
+    height: 500px;
+    width: 23%;
+    margin: 3rem 1.5rem 2rem 12rem;
+    /* background-color:rgb(36, 36, 109); */
+   
+}
+.m6col1{
+    height: 500px;
+    width: 400px;
+    margin: 3rem 2rem 2rem 20rem;
+    /* background-color:rgb(36, 36, 109); */
+    color: black;
+    align-items: center;
+    background-image: url(/assest/project-1.jpg) ;
+
+    opacity: 0.9;
+    border-radius: 20px;
+    /* margin-top: 25rem; */
+}
+.m6col1:hover {
+    transform: scale(1.1);
+}
+
+#m6rabtn{
+    border-radius: 90px;
+    padding: 0px 10px 0px 10px;
+    background-color: #6e6e6e;
+    opacity: 0.9;
+    margin: 21rem 0rem 0rem 2rem;
+}
+#arrowbtn{
+    color: white;
+   position: absolute;
+      padding: 6px;
+    background-color:rgb(18, 85, 185);
+    border-radius: 100%;
+    border: 100% solid rgba(83, 76, 76, 0);
+    margin: 1rem 0rem 0rem 2rem;
+}
+#arrowbtn  :hover { 
+color: rgb(12, 99, 212);
+position: relative;
+background-color:rgb(255, 255, 255);
+padding: 6px;
+border-radius:100%;
+
+}
+
+
+.m6col2{
+    height: 500px;
+    width: 400px;
+    margin: 3rem 2rem 2rem 2rem;
+    /* background-color:rgb(36, 36, 109); */
+    color: #e5e7ee;
+    background-image: url(/assest/project-2.jpg);
+    border-radius: 20px;
+    background-image: linear-gradient(black);
+}
+.m6col2:hover {
+    transform: scale(1.1);
+}
+.m6col3{
+    height: 500px;
+    width: 400px;
+    margin: 3rem 0rem 2rem 2rem;
+    /* background-color: rgb(36, 36, 109); */
+    background-image: url(/assest/project-3.jpg);
+    border-radius: 20px;
+}
+.m6col3:hover {
+    transform: scale(1.1);
+}
+
+.m6c1{
+    background-image: url("/assets/project-1.jpg");
+    background-size: 150px;
+  width: 400px;
+  height: 500px;
+  border: 2px ;
+  opacity: 0.8;
+  border-radius: 30px;
+
+}
+.m6c2{
+    background-image: url("/assets/project-2.jpg");
+    background-size: 150px;
+  width: 400px;
+  height: 500px;
+  border: 2px ;
+  opacity: 0.8;
+  border-radius: 30px;
+
+}
+.m6c3{
+    background-image: url("/assets/project-3.jpg");
+    background-size: 150px;
+  width: 400px;
+  height: 500px;
+  border: 2px ;
+  opacity: 0.8;
+  border-radius: 30px;
+    animation-duration: 0.5s;
+}.m6botom h3{
+     display: flex;
+     justify-content: flex-start;
+     align-content: flex-end;
+     
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 1024px) {
+    .m6top button {
+        margin-left: 2rem;
+        font-size: 12px;
+    }
+
+    .m6top h1 {
+        margin-left: 2rem;
+        font-size: 24px;
+    }
+
+    .m6botom {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .m6col1, .m6col2, .m6col3 {
+        width: 90%;
+        margin: 1rem 0;
+        height: auto;
+    }
+
+    .m6col1 {
+        background-image: url(/assest/project-1.jpg);
+    }
+
+    .m6col2 {
+        background-image: url(/assest/project-2.jpg);
+    }
+
+    .m6col3 {
+        background-image: url(/assest/project-3.jpg);
+    }
+
+    /* Button size adjustment for mobile */
+    #m6rabtn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #arrowbtn {
+        margin: 0.5rem 0 0 1rem;
+    }
+}
+
+/* For very small screens like mobile */
+@media (max-width: 768px) {
+    .m6top button {
+        width: 100%;
+        margin: 1rem 0;
+        font-size: 14px;
+    }
+
+    .m6top h1 {
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .m6col1, .m6col2, .m6col3 {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .m6col1 {
+        background-image: url(/assest/project-1.jpg);
+    }
+
+    .m6col2 {
+        background-image: url(/assest/project-2.jpg);
+    }
+
+    .m6col3 {
+        background-image: url(/assest/project-3.jpg);
+    }
+
+    /* Adjust button and icon sizes */
+    #m6rabtn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #arrowbtn {
+        margin: 0.5rem 0;
+    }
+}
+/* MAIN 7 General Styling */
+.main7 {
+    padding: 2rem;
+}
+
+.m7top {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin-left: 10rem;
+    padding: 40px;
+    height: auto;
+    width: 100%;
+}
+
+/* Fix for missing semicolon */
+.m7top div {
+    padding: 7px;
+}
+
+/* Button Styling */
+.m7top button {
+    padding: 17px;
+    width: 630px;
+    border-radius: 10px;
+    text-align: start;
+    background-color: #dbe4f5;
+    margin: 5px 0;
+}
+
+/* Styling for the 'Popular FAQS' Section */
+.m6top button {
+    margin-left: 48rem;
+    padding: 14px;
+    font-size: 14px;
+    border-radius: 80px;
+    background-color: white;
+}
+
+/* Media Queries for Smaller Screens */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .m6top button {
+        margin-left: 0;
+        padding: 10px;
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .m7top {
+        grid-template-columns: 1fr; /* Change to 1 column for small screens */
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .m7top button {
+        width: 100%; /* Make buttons 100% width on smaller screens */
+        padding: 12px;
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .m6top button {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .m7top {
+        grid-template-columns: 1fr; /* Ensure one column on very small screens */
+        padding: 10px;
+    }
+
+    .m7top button {
+        width: 100%; /* Buttons will take full width */
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+/*            MAIN 8     */
+/* MAIN 8 Styling */
+.main8{
+    display: flex;
+    background-color: whitesmoke    ;
+
+}
+.m8left{
+    align-items: center;
+    justify-content: center;
+    /* border: solid red 2px; */
+    height: 600px;
+    width: 500px;
+    margin: 15rem 0rem 2rem 10rem;
+   
+}
+.m8right{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    /* border: solid red 2px;    */
+    height: 900px;
+    width: 830px;
+    margin: 4rem 1rem 2rem 10rem;
+    /* align-items: center;
+    justify-content: center;
+    
+    */
+    /* box-sizing: border-box; */
+    /* border-radius: 100px; */
+
+}
+.m8right :hover{
+
+    border-color: #94afe9;
+    /* border-radius: 10px; */
+    animation-name: fadeIn;
+}
+/* ........... */
+
+  
+
+/* ........... */
+ .m8rb{
+   margin: 1rem;
+   border: solid rgb(248, 247, 247) 2px;
+   /* margin: 10rem; */
+   padding: 20px 0px 0px 5rem;
+   border-radius: 10px;
+    
+}
+.m8img{
+    height: 200px;
+    width: 200;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+ 
+}
+#icon{
+  
+  height     : 50px;
+  width      : 50px;
+  /* background : rgb(32, 77, 175); */
+  border-radius: 50%;
+  color: rgb(10, 10, 10);
+  
+  align-items: center;
+
+}
+@media (max-width: 768px) {
+    .m8left {
+        margin: 5rem 2rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .m8right {
+        grid-template-columns: 1fr;
+        margin: 0;
+        width: 100%;
+    }
+
+    .m8rb {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .m8img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .m8right i {
+        font-size: 20px;
+        margin: 1rem;
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .m8left {
+        margin: 3rem 1rem;
+    }
+
+    .m8right {
+        grid-template-columns: 1fr;
+        margin: 0;
+        width: 100%;
+    }
+
+    .m8rb {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .m8img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .m8right i {
+        font-size: 18px;
+        margin: 0.5rem;
+    }
+
+    .m41btnos, .m41rdbtn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+/* MAIN 9 Styling */
+.main9 {
+    display: flex;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    padding: 2rem;
+}
+
+/* Left Section (Testimonial Text) */
+.m9left {
+    height: auto;
+    width: 45%;
+    margin: 8rem 0rem 1rem 6rem;
+    padding: 0rem 2rem 3rem 15rem;
+    flex: 1;
+}
+
+/* Testimonial Button Styling */
+.m9tstbtn {
+    color: rgb(27, 134, 206);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* Read More Button Styling */
+.m9rdbtn {
+    padding: 15px;
+    margin: 10px;
+    width: 110px;
+    border-radius: 30px;
+    background-color: #1082ce;
+    color: #e5e7ee;
+    font-size: 16px;
+}
+
+/* Right Section (Testimonial Image and Quote) */
+.m9right {
+    margin: 8rem 0rem 1rem 3rem;
+    padding: 1rem 2rem 1rem 1rem;
+    flex: 1;
+}
+
+/* Paragraph Styling */
+.m9par {
+    font-weight: 10;
+    opacity: 0.7;
+    font-size: 1.2rem;
+}
+
+/* Testimonial Image Styling */
+.m9img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+/* Font Awesome Icon Styling */
+.fa-quote-left {
+    color: rgb(67, 97, 233);
+}
+
+/* Media Queries for Smaller Screens */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .m9left {
+        width: 100%;
+        margin: 3rem 2rem;
+        padding: 2rem;
+    }
+
+    .m9right {
+        width: 100%;
+        margin: 2rem 0;
+        padding: 1rem;
+    }
+
+    .m9par {
+        font-size: 1rem; /* Smaller font size on smaller screens */
+        opacity: 1;
+    }
+
+    .m9img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .m9rdbtn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .m9tstbtn {
+        font-size: 14px;
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .m9left {
+        margin: 2rem 1rem;
+        padding: 1rem;
+    }
+
+    .m9right {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    .m9par {
+        font-size: 0.9rem;
+    }
+
+    .m9img {
+        height: 45px;
+        width: 45px;
+    }
+
+    .m9rdbtn {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+          /*  MAIN 10*/
+
+/* MAIN 10 Styling */
+.main10 {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    background-color: #1363c6;
+    justify-content: space-between; /* To separate the left and right sections */
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.m10img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 3.5rem;
+}
+
+.m10right {
+    margin-top: 2rem;
+    flex: 1; /* Allow the right section to grow and take available space */
+}
+
+.m10nlbtn {
+    color: rgb(255, 255, 255);
+    padding: 8px 27px;
+    border-radius: 20px;
+    background-color: #2753cc;
+    font-weight: 100;
+    text-align: center;
+}
+
+.m10hd {
+    font-weight: 900;
+    font-size: 2.5rem;
+    font-family: serif;
+    color: #e5e7ee;
+    margin-bottom: 1rem;
+}
+
+.m10box {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.m10inp {
+    padding: 1rem 2rem;
+    border-radius: 75px;
+    width: 100%; /* Make the input field responsive */
+    max-width: 530px; /* Limit maximum width for larger screens */
+}
+
+.m10sml {
+    font-weight: 100;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Media Queries for Smaller Screens */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .main10 {
+        flex-direction: column; /* Stack the content vertically */
+        align-items: center;
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .m10left {
+        margin-bottom: 2rem;
+    }
+
+    .m10right {
+        margin: 0;
+        text-align: center;
+    }
+
+    .m10hd {
+        font-size: 2rem;
+    }
+
+    .m10inp {
+        padding: 1rem;
+        width: 80%; /* Adjust input width on smaller screens */
+    }
+
+    .m10nlbtn {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .m10hd {
+        font-size: 1.8rem;
+    }
+
+    .m10inp {
+        width: 90%; /* Make input field wider on very small screens */
+    }
+
+    .m10nlbtn {
+        padding: 6px 16px;
+    }
+}
+
+
+/*        MAIN 11 */
+/* MAIN 11 Styling */
+.main11 {
+    display: flex;
+    flex-wrap: wrap; /* Allow the columns to wrap on smaller screens */
+    background-color: rgb(53, 53, 121);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+#m11col1, #m11col2, #m11col3, #m11col4 {
+    height: 300px;
+    width: 23%;
+    margin: 1rem;
+    color: #e5e7ee;
+}
+
+#m11col1 {
+    font-size: 16px;
+}
+
+#m11col2 {
+    font-size: 16px;
+}
+
+#m11col3 {
+    font-size: 16px;
+}
+
+#m11col4 {
+    font-size: 16px;
+}
+
+.m11span1 {
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #e5e7ee;
+}
+
+.m11span2 {
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    color: #e5e7ee;
+}
+
+.m11span3, .m11span4 {
+    font-size: 25px;
+    font-family: CU;
+    color: #e5e7ee;
+}
+
+.m11pro {
+    color: rgb(235, 232, 232);
+}
+
+.m11pro span:hover {
+    color: rgb(206, 138, 74);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main11 {
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    #m11col1, #m11col2, #m11col3, #m11col4 {
+        width: 48%;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main11 {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    #m11col1, #m11col2, #m11col3, #m11col4 {
+        width: 90%;
+        margin: 1rem 0;
+    }
+
+    .m11span1 {
+        font-size: 30px;
+    }
+
+    .m11span2 {
+        font-size: 14px;
+    }
+
+    .m11span3, .m11span4 {
+        font-size: 22px;
+    }
+
+    .m11pro span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .m11span1 {
+        font-size: 24px;
+    }
+
+    .m11span2 {
+        font-size: 12px;
+    }
+
+    .m11span3, .m11span4 {
+        font-size: 18px;
+    }
+
+    .m11pro span {
+        font-size: 14px;
+    }
+}
+
+
+ 
+
+.nav-links
+/* Responsive Styles */
+/* @media (max-width: 768px) {
+    .toggle {
+        display: block;
+    } */
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Adjust as necessary */
+        right: 0;
+        width: 200px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+;
+
+
+.toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #b19191;
+        position: absolute;
+        top: 60px; /* Adjust as necessary */
+        right: 0;
+        width: 200px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Dropdown container
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.ygvyb{
+    font-size: 24px; /* Adjust this to your needs */
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-block;
+    width: 50px; /* Slightly larger circle */
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+} 
